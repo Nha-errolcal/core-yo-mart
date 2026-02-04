@@ -25,7 +25,6 @@ class PermissionController extends Controller
                 'data' => $permission
             ], 201);
         } catch (\Exception $e) {
-            Log::error('Failed to create permission: ' . $e->getMessage(), ['exception' => $e]);
             return response()->json(['message' => 'Failed to create permission.'], 500);
         }
     }
