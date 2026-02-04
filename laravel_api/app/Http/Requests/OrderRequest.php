@@ -22,7 +22,7 @@ class OrderRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'customer_id' => 'required|exists:customer,id',
+            'customer_id' => 'exists:customer,id',
             'user_id' => 'exists:users,id',
             'paid_amount' => 'required|numeric|min:0',
             'payment_method' => 'required|string',
